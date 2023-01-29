@@ -1,0 +1,10 @@
+dockeFROM node:8.11-slim
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+COPY dist/api.bundle.js .
+
+EXPOSE 8080
+
+CMD ["node", "api.bundle.js"]
